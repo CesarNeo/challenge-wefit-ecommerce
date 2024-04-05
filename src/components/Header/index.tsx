@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import cartIcon from '../../assets/icons/bag-icon.svg'
 import useCart from '../../hooks/cart'
 import * as S from './styles'
@@ -7,7 +9,7 @@ function Header() {
 
   return (
     <S.Container>
-      <h1>WeMovies</h1>
+      <Link to="/">WeMovies</Link>
 
       <S.ContainerCart to="/cart">
         <div>

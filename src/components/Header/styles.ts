@@ -7,9 +7,11 @@ export const Container = styled.header`
   padding: 1.5rem 1rem;
   align-items: center;
 
-  > h1 {
+  > a {
     font-weight: bold;
     font-size: 1.25rem;
+    text-decoration: none;
+    color: ${({ theme }) => theme.white};
   }
 `
 
