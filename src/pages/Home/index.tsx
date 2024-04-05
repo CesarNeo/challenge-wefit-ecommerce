@@ -1,5 +1,5 @@
 function HomePage() {
-  return <div>WeMovies Home</div>
+  return <div>Home</div>
 }
 
 export default HomePage

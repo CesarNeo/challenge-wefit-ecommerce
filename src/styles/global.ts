@@ -19,5 +19,10 @@ export const GlobalStyles = createGlobalStyle`
   button, input {
     border: none;
     outline: none;
+    background: none;
+  }
+
+  button {
+    cursor: pointer;
   }
 `
