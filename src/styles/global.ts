@@ -24,5 +24,6 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
+    line-height: 0;
   }
 `

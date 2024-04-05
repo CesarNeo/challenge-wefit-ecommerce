@@ -10,4 +10,5 @@ export const Container = styled.main`
 
 export const ContentContainer = styled.div`
   flex: 1;
+  padding: 0 1rem;
 `
