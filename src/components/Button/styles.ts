@@ -12,6 +12,7 @@ export const Container = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  padding: 0 0.5rem;
 
   border-radius: 0.25rem;
   text-transform: uppercase;

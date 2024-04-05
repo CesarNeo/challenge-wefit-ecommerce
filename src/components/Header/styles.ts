@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled.header`
@@ -12,7 +13,7 @@ export const Container = styled.header`
   }
 `
 
-export const ContainerCart = styled.button`
+export const ContainerCart = styled(Link)`
   display: flex;
   gap: 0.5rem;
   color: ${({ theme }) => theme.white};

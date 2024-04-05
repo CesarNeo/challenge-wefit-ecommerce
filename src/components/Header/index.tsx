@@ -6,7 +6,7 @@ function Header() {
     <S.Container>
       <h1>WeMovies</h1>
 
-      <S.ContainerCart>
+      <S.ContainerCart to="/cart">
         <div>
           <S.MyCartSpan>Meu Carrinho</S.MyCartSpan>
           <S.CartItensSpan>O itens</S.CartItensSpan>

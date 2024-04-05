@@ -33,4 +33,9 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     line-height: 0;
   }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
 `
