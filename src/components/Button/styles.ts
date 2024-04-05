@@ -23,6 +23,6 @@ export const Container = styled.button<ButtonProps>`
   transition: all 0.2s;
 
   &:hover {
-    background: ${({ theme }) => darken(0.1, theme.primary)};
+    background: ${({ theme, variant }) => darken(0.1, theme[variant])};
   }
 `
