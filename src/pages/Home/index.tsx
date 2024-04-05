@@ -16,6 +16,8 @@ function HomePage() {
       <form onSubmit={handleSubmit}>
         <Input placeholder="Buscar filme pelo nome" name="search" />
       </form>
+
+      <div></div>
     </div>
   )
 }
