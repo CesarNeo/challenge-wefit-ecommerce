@@ -1,4 +1,4 @@
-import cartIcon from '../../assets/icons/cart-icon.svg'
+import cartIcon from '../../assets/icons/bag-icon.svg'
 import * as S from './styles'
 
 function Header() {

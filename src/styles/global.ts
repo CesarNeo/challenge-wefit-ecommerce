@@ -8,12 +8,19 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.background};
+    width: 100dvw;
+    height: 100dvh;
     
+    background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.white};
     font-family: 'Open sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    > div#root {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   button, input {
