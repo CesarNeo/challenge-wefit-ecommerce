@@ -7,4 +7,5 @@ export const DEFAULT_THEME = {
   'text-primary': '#2F2E41',
   'text-secondary': '#999999',
   placeholder: '#C0C0C0',
+  border: '#D9D9D9',
 } as const

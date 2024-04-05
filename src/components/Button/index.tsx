@@ -6,8 +6,12 @@ type ButtonProps = ComponentProps<'button'> & {
   variant?: 'primary' | 'success'
 }
 
-function Button({ variant = 'primary', ...props }: ButtonProps) {
-  return <S.Container variant={variant} {...props} />
+function Button({
+  variant = 'primary',
+  type = 'button',
+  ...props
+}: ButtonProps) {
+  return <S.Container type={type} variant={variant} {...props} />
 }
 
 export default Button

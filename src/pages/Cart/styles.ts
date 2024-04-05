@@ -1,55 +1,55 @@
 import styled from 'styled-components'
 
-import cartEmptyImgDesktop from '../../assets/images/cart-empty-desktop.svg'
-import cartEmptyImgMobile from '../../assets/images/cart-empty-mobile.svg'
-
-export const Container = styled.div`
-  height: 100%;
-  padding-bottom: 2.5rem;
-`
-
-export const ContainerCartEmpty = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 4rem;
-  height: 100%;
+export const CartContainer = styled.div`
+  padding: 1rem;
 
   background: ${({ theme }) => theme.white};
-  color: ${({ theme }) => theme['text-primary']};
   border-radius: 0.25rem;
-
-  > h1 {
-    font-weight: bold;
-    font-size: 1.25rem;
-    text-align: center;
-  }
 `
 
-export const CartEmptyImg = styled.div`
-  width: 11.1644rem;
-  height: 16.585rem;
-  background: url(${cartEmptyImgMobile}) no-repeat center;
+export const CartTotalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.3125rem 0;
+
+  color: ${({ theme }) => theme['text-primary']};
+  border-top: 1px solid ${({ theme }) => theme['text-secondary']};
 
   @media (min-width: 768px) {
-    max-width: 27.9375rem;
-    max-height: 16.585rem;
-    width: 100%;
-    height: 100%;
-
-    background: url(${cartEmptyImgDesktop}) no-repeat center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
 `
 
-export const ButtonEmptyCart = styled.button`
-  max-width: 10.8125rem;
-  width: 100%;
-  height: 2.5rem;
+export const CartTotalPriceContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 
-  background: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.white};
-  border-radius: 0.25rem;
   font-weight: bold;
+
+  > span {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+
+    color: ${({ theme }) => theme['text-secondary']};
+  }
+
+  > strong {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 1.75rem;
+  }
+`
+export const ButtonCompleteOrderContainer = styled.div`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 10.8125rem;
+  }
 `

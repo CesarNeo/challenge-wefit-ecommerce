@@ -30,11 +30,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
+    transition: all 0.2s;
     cursor: pointer;
     line-height: 0;
   }
 
   a {
+    transition: all 0.2s;
     text-decoration: none;
     cursor: pointer;
   }
