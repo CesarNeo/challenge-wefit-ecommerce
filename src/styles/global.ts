@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
     
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.white};
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Open sans';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -27,6 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     outline: none;
     background: none;
+    font-family: 'Open sans';
   }
 
   button {
