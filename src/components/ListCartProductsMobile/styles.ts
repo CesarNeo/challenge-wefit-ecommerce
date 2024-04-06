@@ -32,6 +32,7 @@ export const ProductDetails = styled.div`
   font-weight: bold;
 
   > span {
+    max-width: 6.375rem;
     font-size: 0.875rem;
   }
 
@@ -42,7 +43,7 @@ export const ProductDetails = styled.div`
 
 export const ProductDetailsSubtotal = styled.div`
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 7.3125rem 1fr;
   gap: 1rem;
 `
 

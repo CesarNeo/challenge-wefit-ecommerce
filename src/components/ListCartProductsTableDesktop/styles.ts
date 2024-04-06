@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
-  padding-bottom: 1.5rem;
+  padding-bottom: 24px;
 
   color: ${({ theme }) => theme['text-primary']};
   text-align: left;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 `
 export const HeadContent = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.125rem;
+  grid-template-columns: 280px 1fr 1fr 1.125rem;
   font-size: 0.875rem;
   align-items: center;
   padding-bottom: 1.5rem;
@@ -29,7 +29,7 @@ export const MainContent = styled.div`
 
 export const CartContent = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.125rem;
+  grid-template-columns: 280px 1fr 1fr 1.125rem;
   align-items: center;
   color: ${({ theme }) => theme['text-primary']};
 `

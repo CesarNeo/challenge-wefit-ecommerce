@@ -1,17 +1,35 @@
-import { ComponentProps, forwardRef, ForwardRefRenderFunction } from 'react'
+import {
+  ComponentProps,
+  forwardRef,
+  ForwardRefRenderFunction,
+  useState,
+} from 'react'
 
 import SearchIcon from '../SearchIcon'
 import * as S from './styles'
 
 type InputProps = ComponentProps<'input'>
 
-const Input = forwardRef((props, ref) => {
+const Input = forwardRef(({ onFocus, onBlur, ...props }, ref) => {
+  const [isFocused, setIsFocused] = useState(false)
+
   return (
     <S.Container>
-      <button type="submit">
+      <S.ButtonSearchIcon type="submit" isFocused={isFocused}>
         <SearchIcon />
-      </button>
-      <S.Input ref={ref} {...props} />
+      </S.ButtonSearchIcon>
+      <S.Input
+        ref={ref}
+        onFocus={(focus) => {
+          onFocus?.(focus)
+          setIsFocused(true)
+        }}
+        onBlur={(blur) => {
+          onBlur?.(blur)
+          setIsFocused(false)
+        }}
+        {...props}
+      />
     </S.Container>
   )
 }) as ForwardRefRenderFunction<HTMLInputElement, InputProps>

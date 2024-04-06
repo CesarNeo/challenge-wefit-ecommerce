@@ -21,12 +21,18 @@ export const Container = styled.div`
   }
 `
 
+export const ButtonSearchIcon = styled.button<{ isFocused: boolean }>`
+  color: ${({ theme, isFocused }) =>
+    isFocused ? theme['text-primary'] : theme.placeholder};
+`
+
 export const Input = styled.input`
   flex: 1;
 
   font-size: 1rem;
   color: ${({ theme }) => theme['text-primary']};
   font-weight: 400;
+  transition: all 0.2s;
 
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};

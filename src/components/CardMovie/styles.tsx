@@ -21,13 +21,13 @@ export const MovieImage = styled.img`
 
 export const MovieTitle = styled.span`
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: bold;
   color: ${({ theme }) => theme['text-black']};
 `
 
 export const MoviePrice = styled.strong`
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
 `
 
 export const ButtonCartIconContainer = styled.div`
