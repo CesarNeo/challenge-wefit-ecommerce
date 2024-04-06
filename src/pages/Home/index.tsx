@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom'
 import { listMoviesRequest } from '../../api'
 import CardMovie from '../../components/CardMovie'
 import Input from '../../components/Input'
+import Loader from '../../components/Loader'
 import * as S from './styles'
 
 function HomePage() {
@@ -25,7 +26,6 @@ function HomePage() {
 
   function handleSearchInputChange(event: FormEvent<HTMLInputElement>) {
     const search = event.currentTarget.value
-    console.log('aqui')
     if (!search) {
       setSearchParams((prevParams) => {
         prevParams.delete('search-query')
@@ -49,13 +49,17 @@ function HomePage() {
     }
   }
 
-  const { data: movies } = useQuery({
+  const { data: movies, isLoading: isLoadingMovies } = useQuery({
     queryKey: ['movies', search],
     queryFn: () =>
       listMoviesRequest({
         search,
       }),
   })
+
+  if (isLoadingMovies && !search) {
+    return <Loader />
+  }
 
   return (
     <div>
@@ -67,6 +71,8 @@ function HomePage() {
           onBlur={handleSearchInputBlur}
         />
       </form>
+
+      {isLoadingMovies && <Loader />}
 
       <S.ContentContainer>
         {movies?.map((movie) => <CardMovie key={movie.id} movie={movie} />)}
