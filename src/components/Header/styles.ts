@@ -15,7 +15,7 @@ export const Container = styled.header`
   }
 `
 
-export const ContainerCart = styled(Link)`
+export const ContainerCart = styled.div`
   display: flex;
   gap: 0.5rem;
   color: ${({ theme }) => theme.white};
@@ -41,7 +41,7 @@ export const MyCartSpan = styled.span`
   }
 `
 
-export const CartItensSpan = styled.span`
+export const CartItensLink = styled(Link)`
   font-size: 0.75rem;
   color: ${({ theme }) => theme['text-secondary']};
 `

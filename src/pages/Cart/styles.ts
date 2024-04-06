@@ -5,13 +5,17 @@ export const CartContainer = styled.div`
 
   background: ${({ theme }) => theme.white};
   border-radius: 0.25rem;
+
+  @media (min-width: 768px) {
+    padding: 1.5rem;
+  }
 `
 
 export const CartTotalContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1.3125rem 0;
+  padding-top: 1.3125rem;
 
   color: ${({ theme }) => theme['text-primary']};
   border-top: 1px solid ${({ theme }) => theme['text-secondary']};

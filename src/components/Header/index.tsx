@@ -11,10 +11,10 @@ function Header() {
     <S.Container>
       <Link to="/">WeMovies</Link>
 
-      <S.ContainerCart to="/cart">
+      <S.ContainerCart>
         <div>
           <S.MyCartSpan>Meu Carrinho</S.MyCartSpan>
-          <S.CartItensSpan>{cart.length} itens</S.CartItensSpan>
+          <S.CartItensLink to="/cart">{cart.length} itens</S.CartItensLink>
         </div>
 
         <S.CartIcon src={cartIcon} alt="Ícone de compras" />
