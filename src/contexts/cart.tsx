@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useCallback, useState } from 'react'
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 
 import { Movie } from '../types'
 
@@ -16,7 +22,15 @@ interface CartContextData {
 export const CartContext = createContext({} as CartContextData)
 
 function CartProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>([])
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    const storagedCart = localStorage.getItem('@wemovie:cart')
+
+    if (storagedCart) {
+      return JSON.parse(storagedCart)
+    }
+
+    return []
+  })
 
   const addToCart = useCallback((movie: Movie) => {
     setCart((state) => {
@@ -69,6 +83,10 @@ function CartProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const resetCart = useCallback(() => setCart([]), [])
+
+  useEffect(() => {
+    localStorage.setItem('@wemovie:cart', JSON.stringify(cart))
+  }, [cart])
 
   return (
     <CartContext.Provider
