@@ -12,8 +12,11 @@ export async function listMoviesRequest({ search }: ListMoviesRequestParams) {
 
   const response = await api.get<Movie[]>('/products', {
     params: {
-      title_like: searchFormatted,
+      title: searchFormatted,
     },
   })
+
+  console.log(response)
+
   return response.data
 }
