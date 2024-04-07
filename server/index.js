@@ -9,8 +9,10 @@ export function removeAccents(str) {
 }
 
 server.use(middlewares)
-server.get('/products', (req, res) => {
+server.get('/products', async (req, res) => {
   const { title: titleReq } = req.query
+
+  await new Promise((resolve) => setTimeout(resolve, 1500))
 
   if (titleReq) {
     const filteredProducts = products.filter((product) => {
