@@ -1,17 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 
 import purchaseCompleteImg from '../../assets/images/purchase-completed.svg'
-import useCart from '../../hooks/cart'
 import Button from '../Button'
 import * as S from './styles'
 
 function PurchaseCompleted() {
-  const { resetCart } = useCart()
   const navigate = useNavigate()
 
   function handleBackToHome() {
-    resetCart()
-
     navigate('/')
   }
 

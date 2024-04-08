@@ -6,13 +6,9 @@ interface ListMoviesRequestParams {
 }
 
 export async function listMoviesRequest({ search }: ListMoviesRequestParams) {
-  const searchFormatted = search
-    ?.normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-
   const response = await api.get<Movie[]>('/products', {
     params: {
-      title_like: searchFormatted,
+      title: search,
     },
   })
   return response.data

@@ -37,11 +37,11 @@ Para iniciá-lo, siga os passos abaixo:
 # Instalar as dependências
 $ npm install
 
+# Iniciar o json-server (por padrão está com um delay de 700 milissegundos)
+$ npm run server
+
 # Iniciar o projeto
 $ npm run dev
-
-# Iniciar o json-server (por padrão está com um delay de 1500 milissegundos)
-$ npm run server
 ```
 
 O app estará disponível no seu browser pelo endereço http://localhost:5173/.

@@ -11,14 +11,14 @@ import * as S from './styles'
 
 function CartPage() {
   const [isPurchaseCompleted, setIsPurchaseCompleted] = useState(false)
-  const { cart } = useCart()
-
-  if (!cart.length) {
-    return <CartEmpty />
-  }
+  const { cart, resetCart } = useCart()
 
   if (isPurchaseCompleted) {
     return <PurchaseCompleted />
+  }
+
+  if (!cart.length) {
+    return <CartEmpty />
   }
 
   const totalCart = cart.reduce((acc, product) => {
@@ -28,6 +28,7 @@ function CartPage() {
 
   function handleCompleteOrder() {
     setIsPurchaseCompleted(true)
+    resetCart()
   }
 
   return (
